@@ -26,6 +26,14 @@ public class GameManager : Singleton_template<GameManager>
     [Header("Camera")]
     [SerializeField] private float m_followSpeed;
     [SerializeField] private Transform m_cam;
+    private bool m_shootInput, m_canShoot = true;
+    private float m_moveSpeedMulti = 1f;
+    private Vector3 m_inputDirection;
+    private Vector3 m_mousePos;
+    private Transform m_transform;
+    private Rigidbody2D m_rb;
+    private BulletPool m_bulletPool;
+    private HealthSystem m_healthSystem;
     public Vector3 Velocity { get; private set; }
     #region GameManager
     [Header("GameManager")]
@@ -40,6 +48,13 @@ public class GameManager : Singleton_template<GameManager>
     [SerializeField] private GameObject m_endScreen;
     [SerializeField] private TextMeshProUGUI m_endTopText;
     [SerializeField] private TextMeshProUGUI m_endBottomText;
+    [SerializeField] private TagFriction[] m_tags;
+    [System.Serializable]
+    public struct TagFriction
+    {
+        public string m_tag;
+        public float m_multi;
+    }
     private int m_totalNumTowers = 0;
     private readonly List<Transform> m_towers = new();
     private readonly List<Transform> m_indicators = new();
@@ -93,14 +108,18 @@ public class GameManager : Singleton_template<GameManager>
             else m_indicators[i].gameObject.SetActive(false);
         }
     }
+    public float GetMoveMulti(string tag)
+    {
+        foreach (TagFriction t in m_tags)
+        {
+            if (t.m_tag.CompareTo(tag) == 0)
+            {
+                return t.m_multi;
+            }
+        }
+        return 1f;
+    }
     #endregion
-    private bool m_shootInput, m_canShoot = true;
-    private Vector3 m_inputDirection;
-    private Vector3 m_mousePos;
-    private Transform m_transform;
-    private Rigidbody2D m_rb;
-    private BulletPool m_bulletPool;
-    private HealthSystem m_healthSystem;
     void Start()
     {
         m_bulletPool = BulletPool.Instance();
@@ -183,8 +202,12 @@ public class GameManager : Singleton_template<GameManager>
     }
     private void Move()
     {
-        Vector2 moveDirection = m_moveSpeed * m_inputDirection;
+        Vector2 moveDirection = m_moveSpeedMulti * m_moveSpeed * m_inputDirection;
         Vector3 moveForce = m_rb.mass * m_moveAcceleration * (moveDirection - m_rb.linearVelocity);
         m_rb.AddForce(moveForce);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        m_moveSpeedMulti = GetMoveMulti(collision.tag);
     }
 }

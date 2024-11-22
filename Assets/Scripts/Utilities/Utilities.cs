@@ -187,6 +187,24 @@ namespace MGUtilities
             onUpdate?.Invoke(end);
         }
         #endregion
+        #region Color
+        public static IEnumerator LerpColorOverTime(Color start, Color end, float duration, Action<Color> onUpdate)
+        {
+            float timePassed = 0f;
+
+            while (timePassed < duration)
+            {
+                timePassed += Time.deltaTime;
+                float lerpFactor = Mathf.Clamp01(timePassed / duration);
+                Color currentValue = Color.Lerp(start, end, lerpFactor);
+
+                onUpdate?.Invoke(currentValue);
+
+                yield return null;
+            }
+            onUpdate?.Invoke(end);
+        }
+        #endregion
         public static IEnumerator DelayBoolChange(bool startState, bool endState, float waitTime, Action<bool> onUpdate)
         {
             onUpdate?.Invoke(startState);

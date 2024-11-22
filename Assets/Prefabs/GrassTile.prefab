@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4898980032840029289}
   - component: {fileID: 5260373065949732204}
-  - component: {fileID: -624667715857131891}
-  m_Layer: 0
+  - component: {fileID: -2507006594755637256}
+  m_Layer: 2
   m_Name: GrassTile
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-624667715857131891
+--- !u!61 &-2507006594755637256
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

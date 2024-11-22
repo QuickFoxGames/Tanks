@@ -606,6 +606,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a5110047848044a9948b7719279ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_rotationSpeed: 0
+  m_loadingRing: {fileID: 0}
 --- !u!1 &315238886
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,10 +865,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.5660378, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.5647059, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 0.5647059, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0.5647059, g: 0, b: 0, a: 1}
+    m_DisabledColor: {r: 0.5647059, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -880,7 +882,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 449232556}
   m_FillRect: {fileID: 449232555}
   m_HandleRect: {fileID: 0}
@@ -2862,6 +2864,15 @@ MonoBehaviour:
   m_endScreen: {fileID: 1269746963}
   m_endTopText: {fileID: 1270921658}
   m_endBottomText: {fileID: 1561293187}
+  m_tags:
+  - m_tag: Grass
+    m_multi: 1
+  - m_tag: Dirt
+    m_multi: 1.5
+  - m_tag: Mud
+    m_multi: 0.8
+  - m_tag: Sand
+    m_multi: 0.65
 --- !u!4 &1543908256
 Transform:
   m_ObjectHideFlags: 0
@@ -3433,7 +3444,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762980088}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b694910e0f2e9b48a19fd4d189a2457, type: 3}
   m_Name: 
@@ -3444,11 +3455,14 @@ MonoBehaviour:
   m_tiles:
   - m_prefab: {fileID: 4474193797672558236, guid: eaa8383bd9a50a04e92d607fade04fee, type: 3}
     Type: 0
-    m_connectedTypes: 000000000000000002000000
-  - m_prefab: {fileID: 2829337880422835830, guid: 409389b16f85c4e449180014bfc50c29, type: 3}
+    m_connectedTypes: 000000000000000001000000
+  - m_prefab: {fileID: 6358407441080894148, guid: c101179ab8d03244b8aeaa0ec5325703, type: 3}
+    Type: 1
+    m_connectedTypes: 010000000000000002000000
+  - m_prefab: {fileID: 8027346134805084211, guid: 75c09d6fc34ab9844a8ac9fad9d440b7, type: 3}
     Type: 2
-    m_connectedTypes: 020000000000000003000000
-  - m_prefab: {fileID: 4998784418237297647, guid: 444f45bbb6351d34d9cac529fea80947, type: 3}
+    m_connectedTypes: 020000000100000003000000
+  - m_prefab: {fileID: 2829337880422835830, guid: 409389b16f85c4e449180014bfc50c29, type: 3}
     Type: 3
     m_connectedTypes: 030000000300000002000000
 --- !u!1 &1778709091

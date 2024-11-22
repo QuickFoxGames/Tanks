@@ -8,6 +8,7 @@ public class MapGenerator : MonoBehaviour
     {
         Grass,
         Dirt,
+        Mud,
         Sand,
         Water
     }

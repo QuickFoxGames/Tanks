@@ -39,6 +39,8 @@ public class BulletPool : Singleton_template<BulletPool>
                         GameObject g = m_poolManager.SpawnFromPool("BulletHits", hit.point, Quaternion.LookRotation(Vector3.forward, hit.normal));
                         m_poolManager.ReturnToPoolDelayed("BulletHits", g, 0.5f);
                         bullet.m_penetration--;
+                        bullet.m_damage *= 0.5f;
+                        bullet.m_rb.transform.localScale *= 0.25f;
                         if (bullet.m_penetration < 0)
                         {
                             ReturnBullet(bullet);
@@ -97,6 +99,7 @@ public class Bullet
     public Vector2 m_lastPosition;
     public Rigidbody2D m_rb;
     public Collider2D m_lastHit;
+    private Vector3 m_initScale;
     public Bullet(Rigidbody2D rb)
     {
         m_elapsedTime = 0f;
@@ -104,10 +107,12 @@ public class Bullet
         m_penetration = 0;
         m_lastPosition = Vector2.zero;
         m_rb = rb;
+        m_initScale = m_rb.transform.localScale;
     }
     public void ResetBullet()
     {
         m_rb.gameObject.SetActive(false);
+        m_rb.transform.localScale = m_initScale;
         m_elapsedTime = 0f;
         m_damage = 0f;
         m_penetration = 0;

@@ -20,6 +20,7 @@ public class Tank : MonoBehaviour
     [SerializeField] private ParticleSystem m_shootParticleSystem;
     [SerializeField] private ParticleSystem m_deathParticleSystem;
     [SerializeField] private LayerMask m_bulletMask;
+    [SerializeField] private LayerMask m_tileLayer;
     [SerializeField] private TextMeshProUGUI m_levelText;
 
     private bool m_setNewMoveDirection = true;
@@ -27,6 +28,7 @@ public class Tank : MonoBehaviour
     private bool m_seekPlayer = false;
     private int m_level = 1;
     private float m_detectDistance = 8f;
+    private float m_moveSpeedMulti = 1f;
     private Vector2 m_moveDirection;
     private Transform m_transform;
     private Transform m_managerTransform;
@@ -126,7 +128,7 @@ public class Tank : MonoBehaviour
     }
     private void Move()
     {
-        Vector2 moveVelocity = m_moveSpeed * m_moveDirection;
+        Vector2 moveVelocity = m_moveSpeedMulti * m_moveSpeed * m_moveDirection;
         Vector3 moveForce = m_rb.mass * m_moveAcceleration * (moveVelocity - m_rb.linearVelocity);
         moveForce = AvoidObstacles(moveForce);
         m_rb.AddForce(moveForce);
@@ -161,5 +163,9 @@ public class Tank : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         gameObject.SetActive(state);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        m_moveSpeedMulti = m_manager.GetMoveMulti(other.tag);
     }
 }

@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5244034365031599388}
   - component: {fileID: 3801648093855637876}
-  - component: {fileID: -820192647261703258}
-  m_Layer: 0
+  - component: {fileID: 4171406783923636741}
+  m_Layer: 2
   m_Name: SandTile
-  m_TagString: Untagged
+  m_TagString: Sand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-820192647261703258
+--- !u!61 &4171406783923636741
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

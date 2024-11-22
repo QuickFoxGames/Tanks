@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8380518556162815043}
   - component: {fileID: 2405209753927300749}
-  - component: {fileID: -8943580931418957917}
-  m_Layer: 0
+  - component: {fileID: 5001928097345332000}
+  m_Layer: 2
   m_Name: DirtTile
-  m_TagString: Untagged
+  m_TagString: Dirt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-8943580931418957917
+--- !u!61 &5001928097345332000
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
