@@ -12,7 +12,7 @@ Tanks is a simplistic 2D shooter, where players adventure through a prodecurally
 - **Procedural Enemy Difficulty**: Enemies are generated with different levels and coresponding stats
 
 ## **Screenshots**
-![Gameplay Shot-1]*Comming with first release*
+![Gameplay Shot-1](https://github.com/QuickFoxGames/Tanks/blob/da0b3fe0d65f9fe7d6b87e8cd64ffc21e4f321af/Images/GameplayShot-1.png)
 ![Gameplay Shot-2]*Comming with first release*
 
 ## **Installation**
