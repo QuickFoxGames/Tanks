@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3953952302767631527}
   - component: {fileID: 2112592608718287430}
   - component: {fileID: 424631251448641934}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WaterTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

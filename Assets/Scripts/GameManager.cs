@@ -1,9 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using MGUtilities;
-using UnityEngine.UI;
 using TMPro;
-using NUnit.Framework;
 using System.Collections.Generic;
 public class GameManager : Singleton_template<GameManager>
 {
@@ -21,12 +19,14 @@ public class GameManager : Singleton_template<GameManager>
     [SerializeField] private Transform m_barrel;
     [SerializeField] private Rigidbody2D m_bullet;
     [SerializeField] private ParticleSystem m_shootParticleSystem;
+    [SerializeField] private ParticleSystem m_deathParticleSystem;
     [SerializeField] private LayerMask m_bulletMask;
     [SerializeField] private TextMeshProUGUI m_ammoText;
     [SerializeField] private TextMeshProUGUI m_killsText;
     [Header("Camera")]
     [SerializeField] private float m_followSpeed;
     [SerializeField] private Transform m_cam;
+    public Vector3 Velocity { get; private set; }
     #region GameManager
     [Header("GameManager")]
     [SerializeField] private int m_mapSize;
@@ -34,14 +34,15 @@ public class GameManager : Singleton_template<GameManager>
     [SerializeField] private Tower m_towerPrefab;
     [SerializeField] private Transform m_towerHolder;
     [SerializeField] private int m_numTowers;
+    [SerializeField] private Transform m_mouseTarget;
     [SerializeField] private Transform m_enemyIndictors;
     [SerializeField] private Transform m_indicatorPrefab;
     [SerializeField] private GameObject m_endScreen;
     [SerializeField] private TextMeshProUGUI m_endTopText;
     [SerializeField] private TextMeshProUGUI m_endBottomText;
     private int m_totalNumTowers = 0;
-    private List<Transform> m_towers = new();
-    private List<Transform> m_indicators = new();
+    private readonly List<Transform> m_towers = new();
+    private readonly List<Transform> m_indicators = new();
     public float BulletDamage { get; private set; }
     public float DeltaTime { get; private set; }
     public int NumDeadTanks { get; set; }
@@ -49,8 +50,8 @@ public class GameManager : Singleton_template<GameManager>
     public int Score { get; set; }
     public void SpawnTank(Vector2 pos, int level, Transform parent)
     {
-        Tank t = Instantiate(m_tankPrefab, pos, Quaternion.identity, parent);
-        t.InitTank(Random.Range(level > 1 ? level - 1 : 1, level + 1));
+        Tank t = Instantiate(m_tankPrefab, pos, Quaternion.identity, m_towerHolder);
+        t.InitTank(Random.Range(level > 1 ? level - 1 : 1, level + 1), parent);
     }
     private void SpawnTowers()
     {
@@ -121,15 +122,18 @@ public class GameManager : Singleton_template<GameManager>
         m_mousePos = Camera.main.ScreenToWorldPoint(m_mousePos);
         DeltaTime = Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.L)) m_healthSystem.TakeDamage(50f);
-
         UpdateIndicators();
         if (m_killsText) m_killsText.text = "Tanks: " + NumDeadTanks + "\nTowers: " + NumDeadTowers + "\nScore: " + Score;
         if (NumDeadTowers == m_totalNumTowers && !m_endScreen.activeInHierarchy)
             HandleEndScreen("VICTORY", "You Destroyed All The Towers", Color.green);
         if (m_healthSystem.Health <= 0f && !m_endScreen.activeInHierarchy)
+        {
             HandleEndScreen("GAMEOVER", "You Were Defeated", Color.red);
-
+            m_transform.GetChild(0).gameObject.SetActive(false);
+            m_deathParticleSystem.Play();
+            return;
+        }
+        m_mouseTarget.position = m_mousePos;
         RotateTank();
         UpdateCam();
 
@@ -173,7 +177,9 @@ public class GameManager : Singleton_template<GameManager>
     }
     private void FixedUpdate()
     {
+        if (m_healthSystem.Health <= 0) return;
         Move();
+        Velocity = m_rb.linearVelocity;
     }
     private void Move()
     {
