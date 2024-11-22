@@ -11,6 +11,7 @@ public class Tower : MonoBehaviour
     [SerializeField] private ParticleSystem m_deathParticleSystem;
     private GameManager m_manager;
     private HealthSystem m_healthSystem;
+
     public void InitTower(int newLevel)
     {
         m_manager = GameManager.Instance();

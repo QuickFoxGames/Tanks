@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: e526e0692d9bb5445a3d76de317a2626
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3985392040671530924
+    second: QuickFox_Logo_0
+  - first:
+      213: -295540778775479887
+    second: QuickFox_Logo_1
+  - first:
+      213: 4479727131926977539
+    second: QuickFox_Logo_2
+  - first:
+      213: -1743208571856053936
+    second: QuickFox_Logo_3
+  - first:
+      213: 2103392451108158239
+    second: QuickFox_Logo_4
+  - first:
+      213: -2417856138550127409
+    second: QuickFox_Logo_5
+  - first:
+      213: -1344621149675047428
+    second: QuickFox_Logo_6
+  - first:
+      213: 5272160698733938996
+    second: QuickFox_Logo_7
+  - first:
+      213: -1298018694306811993
+    second: QuickFox_Logo_8
+  - first:
+      213: 4818455726667750141
+    second: QuickFox_Logo_9
+  - first:
+      213: -2135988067631996005
+    second: QuickFox_Logo_10
+  - first:
+      213: -50487851792628027
+    second: QuickFox_Logo_11
+  - first:
+      213: 629066874956672689
+    second: QuickFox_Logo_12
+  - first:
+      213: -6458271801993182076
+    second: QuickFox_Logo_13
+  - first:
+      213: 6818530109174062183
+    second: QuickFox_Logo_14
+  - first:
+      213: 3625843246483819848
+    second: QuickFox_Logo_15
+  - first:
+      213: 9105963406587324709
+    second: QuickFox_Logo_16
+  - first:
+      213: 3900824727976791173
+    second: QuickFox_Logo_17
+  - first:
+      213: 2057788489844767264
+    second: QuickFox_Logo_18
+  - first:
+      213: -7948266501977798260
+    second: QuickFox_Logo_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: QuickFox_Logo_0
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 361
+        width: 563
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf45ea02f4fe4730800000000000000
+      internalID: 3985392040671530924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_1
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 320
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9f1704a3706ebf0800000000000000
+      internalID: -295540778775479887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_2
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 616
+        width: 387
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30cdf2587103b2e30800000000000000
+      internalID: 4479727131926977539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_3
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 325
+        width: 527
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0599a113a01eec7e0800000000000000
+      internalID: -1743208571856053936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_4
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 358
+        width: 291
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b3a8f3a40c03d10800000000000000
+      internalID: 2103392451108158239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_5
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 103
+        width: 170
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc4d8bff6ac027ed0800000000000000
+      internalID: -2417856138550127409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_6
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 143
+        width: 129
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf534204032f65de0800000000000000
+      internalID: -1344621149675047428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_7
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 143
+        width: 47
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 439cfcee83a7a2940800000000000000
+      internalID: 5272160698733938996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_8
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 143
+        width: 102
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7afa60eefd28cfde0800000000000000
+      internalID: -1298018694306811993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_9
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 142
+        width: 125
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa5af144f79ed240800000000000000
+      internalID: 4818455726667750141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_10
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 143
+        width: 103
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9362506b227b52e0800000000000000
+      internalID: -2135988067631996005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_11
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 143
+        width: 134
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c68d68f091ac4ff0800000000000000
+      internalID: -50487851792628027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_12
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 142
+        width: 146
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bee1c56df4eab800800000000000000
+      internalID: 629066874956672689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_13
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 57
+        width: 122
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4844643730c9f56a0800000000000000
+      internalID: -6458271801993182076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_14
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 32
+        width: 65
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c10a7120940ae50800000000000000
+      internalID: 6818530109174062183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_15
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 32
+        width: 69
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84dcaedd835915230800000000000000
+      internalID: 3625843246483819848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_16
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 32
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529e75b0971ee5e70800000000000000
+      internalID: 9105963406587324709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_17
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 32
+        width: 53
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ccd123c63822630800000000000000
+      internalID: 3900824727976791173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_18
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 32
+        width: 58
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ab5189abbbe8c10800000000000000
+      internalID: 2057788489844767264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuickFox_Logo_19
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 57
+        width: 122
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c890a796ab512b190800000000000000
+      internalID: -7948266501977798260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      QuickFox_Logo_0: 3985392040671530924
+      QuickFox_Logo_1: -295540778775479887
+      QuickFox_Logo_10: -2135988067631996005
+      QuickFox_Logo_11: -50487851792628027
+      QuickFox_Logo_12: 629066874956672689
+      QuickFox_Logo_13: -6458271801993182076
+      QuickFox_Logo_14: 6818530109174062183
+      QuickFox_Logo_15: 3625843246483819848
+      QuickFox_Logo_16: 9105963406587324709
+      QuickFox_Logo_17: 3900824727976791173
+      QuickFox_Logo_18: 2057788489844767264
+      QuickFox_Logo_19: -7948266501977798260
+      QuickFox_Logo_2: 4479727131926977539
+      QuickFox_Logo_3: -1743208571856053936
+      QuickFox_Logo_4: 2103392451108158239
+      QuickFox_Logo_5: -2417856138550127409
+      QuickFox_Logo_6: -1344621149675047428
+      QuickFox_Logo_7: 5272160698733938996
+      QuickFox_Logo_8: -1298018694306811993
+      QuickFox_Logo_9: 4818455726667750141
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

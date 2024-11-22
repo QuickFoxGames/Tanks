@@ -7,6 +7,7 @@ public class BulletPool : Singleton_template<BulletPool>
     [SerializeField] private float m_flightTime;
     [SerializeField] private Rigidbody2D m_bulletPrefab;
     [SerializeField] private Transform m_bulletHolder;
+    [SerializeField] private AudioClip[] m_hitSFXs;
 
     private readonly List<Bullet> m_bullets = new();
     private readonly List<Bullet> m_activeBullets = new();
@@ -36,6 +37,9 @@ public class BulletPool : Singleton_template<BulletPool>
                         if (hit.collider == bullet.m_lastHit) continue;
                         else bullet.m_lastHit = hit.collider;
                         hit.collider.GetComponentInParent<HealthSystem>().TakeDamage(bullet.m_damage);
+                        var source = hit.collider.GetComponentInParent<AudioSource>();
+                        source.clip = m_hitSFXs[Random.Range(0, m_hitSFXs.Length-1)];
+                        source.Play();
                         GameObject g = m_poolManager.SpawnFromPool("BulletHits", hit.point, Quaternion.LookRotation(Vector3.forward, hit.normal));
                         m_poolManager.ReturnToPoolDelayed("BulletHits", g, 0.5f);
                         bullet.m_penetration--;

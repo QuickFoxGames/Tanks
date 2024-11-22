@@ -22,6 +22,8 @@ public class Tank : MonoBehaviour
     [SerializeField] private LayerMask m_bulletMask;
     [SerializeField] private LayerMask m_tileLayer;
     [SerializeField] private TextMeshProUGUI m_levelText;
+    [SerializeField] private AudioClip m_shootSFX;
+    [SerializeField] private AudioClip m_driveSFX;
 
     private bool m_setNewMoveDirection = true;
     private bool m_canShoot = true;
@@ -34,6 +36,8 @@ public class Tank : MonoBehaviour
     private Transform m_managerTransform;
     private Transform m_parentTower;
     private Rigidbody2D m_rb;
+    private AudioSource m_gunAudioSource;
+    private AudioSource m_vehicleAudioSource;
     private GameManager m_manager;
     private HealthSystem m_healthSystem;
     private BulletPool m_bulletPool;
@@ -42,10 +46,15 @@ public class Tank : MonoBehaviour
         m_manager = GameManager.Instance();
         m_rb = GetComponent<Rigidbody2D>();
         m_healthSystem = GetComponent<HealthSystem>();
+        var sources = GetComponents<AudioSource>();
+        m_gunAudioSource = sources[1];
+        m_vehicleAudioSource = sources[2];
         m_bulletPool = BulletPool.Instance();
         m_transform = transform;
         m_managerTransform = m_manager.transform;
         m_parentTower = parent;
+        m_vehicleAudioSource.clip = m_driveSFX;
+        m_vehicleAudioSource.Play();
 
         m_level = newLevel;
         m_healthSystem.Health += (m_level * 0.35f * m_healthSystem.Health) - (0.35f * m_healthSystem.Health);
@@ -85,6 +94,8 @@ public class Tank : MonoBehaviour
         b.m_damage = m_bulletDamage;
         b.m_rb.linearVelocity = m_bulletSpeed * m_turret.up;
         m_shootParticleSystem.Play();
+        m_gunAudioSource.clip = m_shootSFX;
+        m_gunAudioSource.Play();
         m_rb.AddForce(m_turret.up * -10f, ForceMode2D.Impulse);
         StartCoroutine(Coroutines.PingPongVector2OverTime(new(0f, 0.5f), new(0f, 0.1f), 0.05f, 0.2f, value => m_barrel.localPosition = value));
         StartCoroutine(DelayShot());
