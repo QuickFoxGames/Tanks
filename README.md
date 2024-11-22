@@ -19,5 +19,5 @@ Tanks is a simplistic 2D shooter, where players adventure through a prodecurally
 *Comming with first release*
 
 ## **Acknowledgments**
-Unity: For the Unity game engine
-Microsoft: For Visual Studio
+- Unity: For the Unity game engine
+- Microsoft: For Visual Studio
